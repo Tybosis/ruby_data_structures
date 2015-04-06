@@ -19,6 +19,9 @@ comprised of all the values of nodes in the linked list, separated by
 a comma.
 
 My sources to write this linked list program were as follows:
+
 [This article on linked lists in Ruby](http://www.thelearningpoint.net/computer-science/basic-data-structures-in-ruby---linked-list---a-simple-singly-linked-list)
+
 [The Wikipedia entry for linked lists](http://en.wikipedia.org/wiki/Linked_list)
+
 [The CS50 video on single linked lists](https://www.youtube.com/watch?v=5nsKtQuT6E8)
