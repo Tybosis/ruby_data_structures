@@ -3,17 +3,18 @@ require 'linked_list'
 
 describe 'linked_list' do
   before do
-    list = LinkedList.new
+    @list = LinkedList.new(1)
   end
 
   it 'should have an insert method that works' do
-    assert_respond_to(LinkedList, insert)
     add_node
-    list.first must_equal 42
+    @list.head.value.must_equal 'hello world'
   end
 
   it 'should be able to insert multiple times' do
     add_node
-    list.insert(Node.new('the question', list.first))
+    @list.insert 'the question'
+    @list.head.value.must_equal 'the question'
+    @list.head.value.wont_equal 'hello world'
   end
 end
