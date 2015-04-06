@@ -13,3 +13,23 @@
 
 # to_s will print a comma-separated list of all values in the all nodes,
 # whatever those values might happen to be: "12, 'sam', :item, 'tango', 42"
+
+
+class LinkedList
+  def initialize
+  end
+
+  def insert(node)
+  end
+
+  def search(val)
+  end
+
+  def remove(node)
+  end
+
+  def to_s
+    ans = ''
+    ans += Node.val until Node.val = nil
+  end
+end
