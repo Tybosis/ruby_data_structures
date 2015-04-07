@@ -24,4 +24,12 @@ describe 'linked_list' do
     @list.remove 'this is also a test'
     @list.search('this is also a test').must_equal nil
   end
+
+  it 'should remove the last item from the list' do
+    @list.insert 'this is a test'
+    @list.insert 'this is also a test'
+    @list.insert 'this will show up first!'
+    @list.remove 'this is a test'
+    @list.search('this is a test').must_equal nil
+  end
 end

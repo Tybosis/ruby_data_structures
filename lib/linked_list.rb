@@ -1,18 +1,3 @@
-# In that file, write the required Ruby classes to implement a linked list.
-# Your list implementation should support the following methods:
-
-# insert(node) will insert the given node at the head of the list.
-# This operation should be O(1).
-
-# search(val) will return the node containing 'val' in the list,
-# if present, else nil. This should be O(n).
-
-# remove(node) will remove the given node from the list, wherever
-# it might be. Return the node object. If it isn't found,
-# return nil.
-
-# to_s will print a comma-separated list of all values in the all nodes,
-# whatever those values might happen to be: "12, 'sam', :item, 'tango', 42"
 require 'pry'
 
 class LinkedList
@@ -23,23 +8,21 @@ class LinkedList
   end
 
   def insert(input_value)
-    current = @head
-    @head = Node.new(input_value, current)
+    @head = Node.new(input_value, @head)
   end
 
   def search(search_terms)
     current = @head
-    until current.next_node.nil?
-      return current if current.value == search_terms
+    until current.nil? || current.value == search_terms
       current = current.next_node
     end
-    nil
+    current
   end
 
   def remove(input_value)
     current = @head
     if current.value == input_value
-      @head = (current.next_node.nil? ? Node.new(nil, nil) : current.next_node)
+      @head = (current.next_node.nil? ? Node.new : current.next_node)
       return current
     end
     until current.next_node.nil?
