@@ -21,4 +21,9 @@ describe 'dequeue' do
     @queue.dequeue
     @queue.tail.value.must_equal 'first'
   end
+
+  it 'raises error if dequeue is called on an empty queue' do
+    exception = proc { @queue.dequeue }.must_raise RuntimeError
+    exception.message.must_equal 'Queue is empty. Nothing to dequeue!'
+  end
 end

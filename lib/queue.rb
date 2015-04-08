@@ -21,6 +21,7 @@ class Queue
   end
 
   def dequeue
+    fail 'Queue is empty. Nothing to dequeue!' if @head.nil? && @tail.nil?
     if @head.nil?
       @tail = nil
       return tail
