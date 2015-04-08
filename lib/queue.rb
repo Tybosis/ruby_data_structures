@@ -28,8 +28,7 @@ class Queue
     end
     current = @tail
     @tail = @tail.prev_node
-    tail.next_node = nil
-    current.prev_node = nil
+    tail.next_node, current.prev_node = nil
     current
   end
 
