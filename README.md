@@ -47,5 +47,8 @@ method uses the hash method to find the proper bucket for a given key.
 It will then use the search method on the linked list to find the node
 that contains that key, and return the corresponding value.  The size of the
 hash is accessible via an attribute on the hashtable itself.  Everytime a new
-node is added to a bucket in the hastable, the size will increase by one.
+node is added to a bucket in the hastable, the size will increase by one. The
+delete method will remove a given value from the proper bucket in the hash and
+return the value of the node that was deleted.  The size of the hash will also
+be decrimented by one.
 

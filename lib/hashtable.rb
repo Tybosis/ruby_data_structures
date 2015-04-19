@@ -22,6 +22,13 @@ class Hashtable
     @buckets[hash(key)].search(key)
   end
 
+  def delete(key)
+    # should remove the value at key, and return value
+    value = @buckets[hash(key)].remove(key)
+    @size -= 1
+    value
+  end
+
   def hash(key)
     Gibberish::SHA1(key).hex % @size_of_array
   end
