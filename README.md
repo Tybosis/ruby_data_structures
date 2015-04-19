@@ -34,3 +34,21 @@ which I called head and tail respectively.  The queue class includes an enqueue
 method to add a new node to the head of the queue, a dequeue method to remove
 the tail element of the queue, and a size method to return how many nodes are
 in the queue.
+
+
+## Hashtable
+
+The hashtable.rb file contains my implementation of a binary tree in ruby.
+The hashtable itself is a array of 'buckets' which are linked lists of nodes
+that contain a key and a value.  The set method will use the hash method to
+assign an index in the array where a new node holding the key and value passed
+into the set method will get added to the linked list at that index.  The get
+method uses the hash method to find the proper bucket for a given key.
+It will then use the search method on the linked list to find the node
+that contains that key, and return the corresponding value.  The size of the
+hash is accessible via an attribute on the hashtable itself.  Everytime a new
+node is added to a bucket in the hastable, the size will increase by one. The
+delete method will remove a given value from the proper bucket in the hash and
+return the value of the node that was deleted.  The size of the hash will also
+be decrimented by one.
+
