@@ -2,3 +2,8 @@ language: ruby
 branches:
   only:
     - master
+  except:
+   - hashtable
+   -binary_tree
+   - linked_list
+   - queue
