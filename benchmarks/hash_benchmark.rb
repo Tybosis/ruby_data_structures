@@ -1,6 +1,6 @@
 require 'benchmark'
-require_relative 'hashtable'
-require_relative 'hash_linked_list'
+require 'hashtable'
+require 'hash_linked_list'
 
 words = []
 File.open('/usr/share/dict/words').each_line { |word| words << word }
