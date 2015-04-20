@@ -4,7 +4,7 @@ require 'hash_linked_list'
 
 describe 'hashtable' do
   it 'should be initialied with a set size' do
-    p Hashtable.new(5, HashLinkedList)
+    Hashtable.new(5, HashLinkedList)
   end
 
   it 'should be able to set and get values' do

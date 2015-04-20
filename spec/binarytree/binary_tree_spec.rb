@@ -7,6 +7,9 @@ describe 'binary_tree' do
   end
 
   it 'should be able to add values' do
-    tree = BinaryTree.new(42)
-    tree.insert(100)
+    tree = BinaryTree.new('Bob')
+    tree.value.must_equal 'Bob'
+    tree.push_right('Tom')
+    tree.right.value.must_equal 'Tom'
   end
+end

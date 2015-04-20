@@ -53,6 +53,7 @@ end
 
 binary = BinaryTree.new('Tim')
 
+# Setting up the tree
 binary.push_left('Jony')
 binary.push_right('Phil')
 binary.left.push_left('Dan')
@@ -67,8 +68,3 @@ puts ""
 binary.in_order
 puts ""
 binary.post_order
-
-# Tim   Jony  Phil
-# Phil  Craig Eddie
-# Jony  Dan   Katie
-# Katie Peter Andrea
