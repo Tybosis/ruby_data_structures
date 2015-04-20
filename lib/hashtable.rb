@@ -23,7 +23,6 @@ class Hashtable
   end
 
   def delete(key)
-    # should remove the value at key, and return value
     value = @buckets[hash(key)].remove(key)
     @size -= 1
     value
