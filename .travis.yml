@@ -4,6 +4,6 @@ branches:
     - master
   except:
    - hashtable
-   -binary_tree
+   - binary_tree
    - linked_list
    - queue
