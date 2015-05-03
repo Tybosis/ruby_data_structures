@@ -25,6 +25,6 @@ describe 'hashtable' do
     @hash.size.must_equal 1
     @hash.delete('name').must_equal 'tyler'
     @hash.size.must_equal 0
-    @hash.get('name').target.must_be_nil
+    Proc.new { @hash.get('name') }.must_raise(NoMethodError)
   end
 end

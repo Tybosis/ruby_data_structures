@@ -1,14 +1,12 @@
-require 'pry'
-
 class LinkedList
   attr_accessor :head
 
   def initialize(input_value = nil)
-    @head = Node.new(input_value, nil)
+    @head = Linked_Node.new(input_value, nil)
   end
 
   def insert(input_value)
-    @head = Node.new(input_value, @head)
+    @head = Linked_Node.new(input_value, @head)
   end
 
   def search(search_terms)
@@ -22,7 +20,7 @@ class LinkedList
   def remove(input_value)
     current = @head
     if current.value == input_value
-      @head = (current.next_node.nil? ? Node.new : current.next_node)
+      @head = (current.next_node.nil? ? Linked_Node.new : current.next_node)
       return current
     end
     until current.next_node.nil?
@@ -47,7 +45,7 @@ class LinkedList
   end
 end
 
-class Node
+class Linked_Node
   attr_accessor :value, :next_node
 
   def initialize(value, next_node)

@@ -19,6 +19,6 @@ describe 'linked_list' do
     add_node
     @list.insert('second')
     @list.insert('first')
-    @list.search('hello world').class.must_equal Node
+    @list.search('hello world').class.must_equal Linked_Node
   end
 end
