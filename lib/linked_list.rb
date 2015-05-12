@@ -2,12 +2,12 @@ require 'linked_node'
 class LinkedList
   attr_accessor :head
 
-  def initialize(input_value = nil)
-    @head = Linked_Node.new(input_value, nil)
+  def initialize(input_value = nil, node)
+    @head = node.new(input_value, nil)
   end
 
-  def insert(input_value)
-    @head = Linked_Node.new(input_value, @head)
+  def insert(input_value, node)
+    @head = node.new(input_value, @head)
   end
 
   def search(search_terms)
@@ -18,10 +18,10 @@ class LinkedList
     current
   end
 
-  def remove(input_value)
+  def remove(input_value, node)
     current = @head
     if current.value == input_value
-      @head = (current.next_node.nil? ? Linked_Node.new : current.next_node)
+      @head = (current.next_node.nil? ? node.new : current.next_node)
       return current
     end
     until current.next_node.nil?
@@ -46,15 +46,14 @@ class LinkedList
   end
 
   def reverse
-    first = @head
-    rest = @head.next_node
+    the_rest = @head.next_node
     current = @head.next_node
     @head.next_node = nil
-    until rest.nil?
-      rest = rest.next_node
-      current.next_node = first
-      first = current
-      current = second
+    until the_rest.nil?
+      the_rest = the_rest.next_node
+      current.next_node = @head
+      @head = current
+      current = the_rest
     end
   end
 end
