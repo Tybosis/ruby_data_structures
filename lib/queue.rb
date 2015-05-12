@@ -6,16 +6,16 @@ class Queue
     @head, @tail = nil
   end
 
-  def enqueue(value)
+  def enqueue(value, node)
     if tail.nil?
-      @tail = Node.new(value)
+      @tail = node.new(value)
       return tail
     elsif @head.nil?
-      @head = Node.new(value, @tail)
+      @head = node.new(value, @tail)
       @tail.prev_node = @head
     else
       current = @head
-      @head = Node.new(value, current)
+      @head = node.new(value, current)
       current.prev_node = @head
     end
   end
