@@ -3,7 +3,7 @@ require 'linked_list'
 
 describe 'linked_list' do
   before do
-    @list = LinkedList.new(1)
+    @list = LinkedList.new(1, Linked_Node)
   end
 
   it 'should exist' do

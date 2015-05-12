@@ -3,7 +3,7 @@ require 'linked_list'
 
 describe 'linked_list' do
   before do
-    @list = LinkedList.new(1)
+    @list = LinkedList.new(1, Linked_Node)
   end
 
   it 'should have a search method that works' do
@@ -17,8 +17,8 @@ describe 'linked_list' do
 
   it 'search returns a node object' do
     add_node
-    @list.insert('second')
-    @list.insert('first')
+    @list.insert('second', Linked_Node)
+    @list.insert('first', Linked_Node)
     @list.search('hello world').class.must_equal Linked_Node
   end
 end
