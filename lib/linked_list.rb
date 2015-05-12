@@ -1,3 +1,4 @@
+require 'linked_node'
 class LinkedList
   attr_accessor :head
 
@@ -43,13 +44,17 @@ class LinkedList
     end
     ans += "#{current.value}"
   end
-end
 
-class Linked_Node
-  attr_accessor :value, :next_node
-
-  def initialize(value, next_node)
-    @value = value
-    @next_node = next_node
+  def reverse
+    first = @head
+    rest = @head.next_node
+    current = @head.next_node
+    @head.next_node = nil
+    until rest.nil?
+      rest = rest.next_node
+      current.next_node = first
+      first = current
+      current = second
+    end
   end
 end
