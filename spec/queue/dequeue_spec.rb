@@ -7,15 +7,15 @@ describe 'dequeue' do
   end
 
   it 'removes only node if there is only one node' do
-    @queue.enqueue('Hello')
+    @queue.enqueue('Hello', Node)
     @queue.tail.value.must_equal 'Hello'
     @queue.dequeue
     @queue.tail.must_be_nil
   end
 
   it 'removes last node if there are multiple values' do
-    @queue.enqueue('second')
-    @queue.enqueue('first')
+    @queue.enqueue('second', Node)
+    @queue.enqueue('first', Node)
     @queue.head.value.must_equal 'first'
     @queue.tail.value.must_equal 'second'
     @queue.dequeue

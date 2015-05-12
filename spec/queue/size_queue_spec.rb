@@ -11,15 +11,15 @@ describe 'enqueue' do
   end
 
   it 'will be one if queue has one node' do
-    @queue.enqueue 'first'
+    @queue.enqueue('first', Node)
     @queue.size.must_equal 1
   end
 
   it 'will update as more nodes get added' do
-    @queue.enqueue 'third'
-    @queue.enqueue 'second'
+    @queue.enqueue('third', Node)
+    @queue.enqueue('second', Node)
     @queue.size.must_equal 2
-    @queue.enqueue 'first'
+    @queue.enqueue('first', Node)
     @queue.size.must_equal 3
     @queue.dequeue
     @queue.size.must_equal 2
