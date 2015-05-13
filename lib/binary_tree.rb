@@ -50,21 +50,3 @@ class NillNode
 
   [:post_order, :in_order].each { |ali| alias_method ali, :pre_order }
 end
-
-binary = BinaryTree.new('Tim')
-
-# Setting up the tree
-binary.push_left('Jony')
-binary.push_right('Phil')
-binary.left.push_left('Dan')
-binary.left.push_right('Katie')
-binary.left.right.push_left('Peter')
-binary.left.right.push_right('Andrea')
-binary.right.push_left('Craig')
-binary.right.push_right('Eddie')
-
-binary.pre_order
-puts ""
-binary.in_order
-puts ""
-binary.post_order
