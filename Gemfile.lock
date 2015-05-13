@@ -17,6 +17,6 @@ PLATFORMS
 
 DEPENDENCIES
   gibberish
-  minitest (= 5.5.1)
+  minitest
   pry
   rake
