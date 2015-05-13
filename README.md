@@ -34,3 +34,14 @@ which I called head and tail respectively.  The queue class includes an enqueue
 method to add a new node to the head of the queue, a dequeue method to remove
 the tail element of the queue, and a size method to return how many nodes are
 in the queue.
+
+### Binary Tree
+
+The binary_tree.rb is my implementation of a binary tree in ruby.  The binary tree
+is a recursive data structure where an initial binary tree  object can be created,
+and then new binary trees can be added to the left or right, creating a tree
+of binary trees.  The binary tree includes push_left and push_right methods to
+add values to the left or right of the tree respectively, and three different
+methods of traversal; pre-order, in-order, and post-order. See this
+[wikipedia page](http://en.wikipedia.org/wiki/Tree_traversal) for a good
+explanation of the three different methods of traversal.
