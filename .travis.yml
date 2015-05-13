@@ -1,8 +1,10 @@
 language: ruby
+
+rvm:
+  - 2.2.2
 branches:
   only:
     - master
-
   except:
    - hashtable
    - binary_tree
